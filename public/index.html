@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -20,18 +23,76 @@
     -->
     <title>React App</title>
   </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+  <body class="main">
+    <div class="topbar">
+      <a class = "topbar_profile_all">
+        <img src="images/photo-profile.png" width="38" height="32" />
+        <a class="topbar_profile">ПРОФИЛЬ</a>
+      </a>
+    </div>
+    <aside>
+    <nav class="navigationSideBar">  
+      <div class="navigationSideBar_Logo">
+        <a href="/">
+         <img src="images/spotify-full-logo.png" width="170" height="50">
+        </a>
+      </div>
+      <ul class="navigationSideBar_Body">
+        <li><i class="fa fa-home fa-fw" aria-hidden="true"></i><a>ГЛАВНАЯ</a></li>
+        <li><i class="fa fa-search fa-fw" aria-hidden="true"></i><a>ПОИСК</a></li>
+        <li><i class="fa fa-music fa-fw" aria-hidden="true"></i><a>МОЯ МУЗЫКА</a></li>
+      </ul>
+    </nav>
+    </aside>
+      
+    <div class="mainbar">
+      <div class="mainbarRecomendation">
+        <div class="textRecomendation">
+          <p>Рекомендации для вас</p>
+        </div>
+        <div class="contextRecomendation">
+          <div class="recomendationPlaylist">
+            <img src="images/cover-first.jpg" width="120" height="120">
+            <div class="coverName">
+              <a>Для влюбленных</a>
+            </div>
+          </div>
+          <div class="recomendationPlaylist">
+            <img src="images/cover-second.jpg" width="120" height="120">
+            <div class="coverName">
+              <a>Для вечеров</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mainbarCharts">
+        <div class="textCharts">
+          <p>Топ чарт</p>
+        </div>
+        <div class="contextCharts">
+          <div class="song">
+            <img src="images/song-borntodie-lanadelrey.jpg" width="30" height="30">
+            <a>Born to die - Lana Del Rey</a>
+          </div>
+          <div class="song">
+            <img src="images/song-young-beautiful-lanadelrey.webp" width="30" height="30">
+            <a>Young&Beautiful - Lana Del Rey</a>
+          </div>
+          <div class="song">
+            <img src="images/song-ImagineDragons-Believer.jpeg" width="30" height="30">
+            <a>Believer - Imagine Dragons</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="musicbar">
+      <a class="player"><img src="images/play.png" width="42" height="42"></a>
+      <a class="currentSong">Играет сейчас</a>
+      <div class="sliderLine">
+        <div class="slider"></div>
+        <div class="line"></div>
+        <a class="time"> 0:00</a>
+     </div>
+    </div>
   </body>
 </html>
